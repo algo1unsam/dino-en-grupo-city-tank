@@ -114,8 +114,9 @@ object dino {
 	method position() = position
 	
 	method saltar(){
+		if(self.position().y()==1){
 		self.subir()
-		game.onTick(3000,"Bajar",{self.bajar()})
+		game.onTick(3000,"Bajar",{self.bajar()})}
 	   
 	}
 	method subir(){
