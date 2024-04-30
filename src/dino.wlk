@@ -113,15 +113,17 @@ object dino {
 	method position() = position
 	
 	method saltar(){
-		//COMPLETAR
+		self.subir()
+		game.onTick(3000,"Bajar",{self.bajar()})
+	   
 	}
-	
 	method subir(){
 		position = position.up(1)
 	}
 	
 	method bajar(){
 		position = position.down(1)
+		game.removeTickEvent("Bajar")
 	}
 	method morir(){
 		game.say(self,"¡Auch!")
