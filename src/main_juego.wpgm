@@ -1,0 +1,19 @@
+import wollok.game.*
+import claseAuto.*
+import juego.*
+
+
+
+program cityTank {
+	
+	game.title("City Tank")
+	game.height(10)
+	game.width(10)
+	game.ground("fondo.png")
+	game.addVisual(tanke)
+	tanke.iniciar()
+	game.start()
+	
+}
+	
+
